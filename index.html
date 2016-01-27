@@ -3,18 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="https://code.jquery.com/jquery-2.2.0.js">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/ngInfiniteScroll/1.2.2/ng-infinite-scroll.js'></script>
 	<script src="app.js"></script>
 </head>
 <body ng-controller="scrollController">
-	<div class="scroll" infinite-scroll="paging()"></div>
-		<ul ng-repeat="item in agenda">
-			<li>
-			
-			</li>
-		</ul>
+<div class="header"><h1 class="title">Appointment Calendar</h1></div>
+	<div class="scroll" infinite-scroll="loadMore()" infinite-scroll-distance="1">
+		<div class="box" ng-repeat='n in images'>{{n}}
+		<p class='dateName'></p>
+	</div>
+		
 	</body>
 </html>
