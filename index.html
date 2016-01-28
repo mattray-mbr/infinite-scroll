@@ -15,8 +15,8 @@
 		<div class="box" ng-repeat='n in images'>
 			<div class='date-name' ng-bind="n.appointment" ng-hide="n.agendaVisibility"><p>{{n.agenda}}</p></div>
 			<h2 class="full-date">{{n.day}}</h2>
-			<button class="add-apoint" ng-click="addAgenda($index)">{{n.button}}</button>
-			<textarea class="add-text" type="text" ng-show="n.visibility" ng-model="n.appointment"></textarea>
+			<button class="add-apoint" ng-click="addAgenda($index, $event)" ng-style="edit">{{n.button}}</button>
+			<textarea class="add-text" type="text" ng-show="n.visibility" ng-model="n.appointment" ng-blur="exitText($index); edit={'background-color': '#eb1'}"></textarea>
 		</div>
 	</div>
 </body> 

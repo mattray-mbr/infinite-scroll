@@ -42,8 +42,16 @@ body {
 	display: block;
 	height: 30px;
 	background-color: #ace;
-	/*border: 1px solid black;*/
 	border-radius: 5px;
+	font-weight: bold;
+}
+.edit-apoint {
+	position: absolute;
+	height: 30px;
+	background-color: #eb1;
+	border-radius: 5px;
+	left:6px;
+	font-weight: bold;
 }
 .add-text {
 	position: absolute;
@@ -51,6 +59,7 @@ body {
 	right:10px;
 	width:70%;
 	height: 76px;
+	font-size: 14px;
 
 }
 .date-name {
