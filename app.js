@@ -18,7 +18,7 @@ var app = angular.module('scroll', ['infinite-scroll'])
     			count: $scope.counter++,
     			day: formattedDate,
     			agenda: $scope.comment,
-			}
+			} 
       		$scope.images.push(date);
    		}
 	}
