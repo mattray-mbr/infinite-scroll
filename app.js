@@ -1,16 +1,33 @@
 var app = angular.module('scroll', ['infinite-scroll'])
 	app.controller('scrollController', ['$scope', function($scope){
 
-
+	$scope.today = new Date();
+	// $scope.today.setDate(28);
+	console.log($scope.today);
 	$scope.images = [];
 	$scope.counter = 0;
+	$scope.comment = '';
+
 	$scope.loadMore = function(){
+
 		var last = $scope.images[$scope.images.length ];
     	for(var i = 0; i <3; i++) {
-      		$scope.images.push(++$scope.counter);
+    		var date = {
+    			count: $scope.counter++,
+    			day: $scope.today++,
+    			agenda: $scope.comment,
+			}
+      		$scope.images.push(date);
+      		// $scope.today.setDate(27 + $scope.counter);
    		}
 	}
-	$scope.loadMore();
+	// $scope.loadMore();
+
+	// $scope.time = function(){
+	// 	$scope.today++;
+	// 	return $scope.today
+
+	// }
 	}]);
 
 
