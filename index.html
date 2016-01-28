@@ -12,8 +12,9 @@
 <body ng-controller="scrollController">
 <div class="header"><h1 class="title">Appointment Calendar</h1></div>
 	<div class="scroll" infinite-scroll="loadMore()" infinite-scroll-distance="1">
-		<div class="box" ng-repeat='n in images'>{{n}}
-		<p class='dateName'></p>
+		<div class="box" ng-repeat='n in images'>{{n.day}}  
+		<p class='dateName' ng-click="addAgenda()">{{n.agenda}}</p>
+		<input type="text" >
 	</div>
 		
 	</body>
