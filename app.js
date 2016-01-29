@@ -4,7 +4,6 @@ var app = angular.module('scroll', ['infinite-scroll'])
 	var today = new Date();
 	$scope.images = [];
 	$scope.counter = 0;
-	
 
 	$scope.loadMore = function(){
 
@@ -17,11 +16,10 @@ var app = angular.module('scroll', ['infinite-scroll'])
     		var date = {
     			count: $scope.counter++,
     			day: formattedDate,
-    			agenda: $scope.comment,
     			visibility: false,
     			agendaVisibility: true,
-    			showEdit: false,
     			button: 'Add Appointment',
+    			agenda: 'a',
 			} 
       		$scope.images.push(date);
    		}
@@ -33,11 +31,10 @@ var app = angular.module('scroll', ['infinite-scroll'])
 				});
 	}
 	$scope.exitText = function(index){
+		$scope.images[index].agenda = $scope.images[index].appointment
+		$scope.images[index].appointment = ''
 		$scope.images[index].visibility = false;
 		$scope.images[index].agendaVisibility = false;
-		$scope.images[index].showEdit = true;
 		$scope.images[index].button = "Edit Appointment";
 	}
-	
-
-	}]);
+}]);

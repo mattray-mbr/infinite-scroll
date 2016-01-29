@@ -13,7 +13,7 @@
 <div class="header"><h1 class="title">Appointment Calendar</h1></div>
 	<div class="scroll" infinite-scroll="loadMore()" infinite-scroll-distance="1">
 		<div class="box" ng-repeat='n in images'>
-			<div class='date-name' ng-bind="n.appointment" ng-hide="n.agendaVisibility"><p>{{n.agenda}}</p></div>
+			<div class='date-name' ng-hide="n.agendaVisibility">{{n.agenda}}</div>
 			<h2 class="full-date">{{n.day}}</h2>
 			<button class="add-apoint" ng-click="addAgenda($index, $event)" ng-style="edit">{{n.button}}</button>
 			<textarea class="add-text" type="text" ng-show="n.visibility" ng-model="n.appointment" ng-blur="exitText($index); edit={'background-color': '#eb1'}"></textarea>
